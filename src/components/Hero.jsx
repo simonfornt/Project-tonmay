@@ -32,8 +32,8 @@ const Hero = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
-          <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl text-black max-w-sm transform transition-all scale-95 animate-fadeIn">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm">
+          <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl text-black max-w-sm animate-fadeIn">
             <h2 className="text-2xl font-semibold text-center mb-4">Send Your Help</h2>
             <p className="text-lg text-center mb-4">
               Bkash Number: <strong>018498258215</strong>

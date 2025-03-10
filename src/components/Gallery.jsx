@@ -5,12 +5,18 @@ import picnic from "../assets/picnic.jpg";
 import ballon from "../assets/ballon.jpg";
 import mmc from "../assets/mmc.jpg";
 import childern from "../assets/childern.jpg";
+import school1 from "../assets/school1.jpg";
+import school2 from "../assets/school2.jpg";
+import school3 from "../assets/school3.jpg";
 const images = [
   ballon,
   picnic,
   Kombol,
   mmc,
   childern,
+  school1,
+  school3,
+  school2,
   
 ];
 

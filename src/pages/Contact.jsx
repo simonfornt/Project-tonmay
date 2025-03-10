@@ -116,13 +116,16 @@ const ContactForm = () => {
               Quam elementum pulvinar etiam non quam lacus. Suspendisse scelerisque purus semper.
             </p>
             <p className="mt-4">
-              <strong>Location:</strong> 4517 Washington Ave, Manchester, Kentucky 39495
+              <strong>Location:</strong> Railgate, Sadar, Jashore, Khulna, Dhaka, Bangladesh.
+
             </p>
             <p>
-              <strong>Phone:</strong> +88544767456
+              <strong>Phone:</strong> +880 1972730204
+
             </p>
             <p>
-              <strong>Email:</strong> Givelifecharity@gmail.com
+              <strong>Email:</strong> shuddhangan@gmail.com
+
             </p>
           </div>
         </div>

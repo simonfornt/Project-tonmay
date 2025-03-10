@@ -3,12 +3,14 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Cards from "../components/Cards";
 import baccha from "../assets/baccha.jpg";
+import Mission from "../components/Misson";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
       <Hero />
+      <Mission/>
      <div>
       <h2 className="text-center text-3xl py-9 font-semibold text-teal-300">Help us to build a future</h2>
       <div className="md:flex">
