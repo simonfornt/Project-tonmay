@@ -1,41 +1,46 @@
 import React from "react";
 
-
-
 const DonationCard = ({ imageUrl, des }) => {
-  // Function to show alert
   const handleDonateClick = () => {
     alert("Send money by Bkash 01724239801");
   };
 
   return (
-    <>
-  
-    <div className=" max-w-sm my-4 mx-10 bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
-       
-      {/* Styled Image */}
-      <div className="h-60 w-full overflow-hidden">
+    <div className="w-full md:w-96 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl 
+      transition-shadow duration-300 mx-auto mb-10 hover:scale-[1.02] transition-transform
+      border border-gray-100">
+      {/* Image Section */}
+      <div className="relative aspect-square overflow-hidden">
         <img
           src={imageUrl}
           alt="Donation"
-          className="w-full h-full object-cover transform hover:scale-105 transition duration-300"
+          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
         />
       </div>
 
-      <div className="p-5 text-center">
-        <h2 className="text-xl font-bold text-teal-600">Donation</h2>
-        <p className="text-gray-600 mt-2">{des}</p>
+      {/* Content Section */}
+      <div className="p-8 md:p-10 space-y-6">
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold text-teal-600">Support Our Cause</h3>
+          <p className="text-gray-600 leading-relaxed text-justify">
+            {des}
+          </p>
+        </div>
 
+        {/* Donation Button with Font Awesome Icon */}
         <button
-          className="mt-4 bg-red-600 text-white px-5 py-2 rounded-lg text-lg font-semibold hover:bg-red-700 transition duration-300"
           onClick={handleDonateClick}
-          onTouchStart={handleDonateClick} // Works on touch devices
+          onTouchStart={handleDonateClick}
+          className="w-full bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-semibold 
+            py-4 px-8 rounded-xl hover:from-teal-600 hover:to-cyan-700 transition-all duration-300
+            focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2
+            flex items-center justify-center gap-3"
         >
-          Donate Now
+          <i className="fas fa-hand-holding-heart text-xl"></i>
+          <span className="text-lg">Donate Now</span>
         </button>
       </div>
     </div>
-    </>
   );
 };
 

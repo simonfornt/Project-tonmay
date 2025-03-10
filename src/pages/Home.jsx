@@ -7,19 +7,25 @@ import Mission from "../components/Misson";
 
 const Home = () => {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <Hero />
-      <Mission/>
-     <div>
-      <h2 className="text-center text-3xl py-9 font-semibold text-teal-300">Help us to build a future</h2>
-      <div className="md:flex">
-      <Cards imageUrl={baccha} des="Help poor childern by giving only 300 Tk"/>
-      <Cards imageUrl={baccha} des="Help poor childern by giving only 300 Tk"/>
-      <Cards imageUrl={baccha} des="Help poor childern by giving only 300 Tk"/>
-      </div>
-     </div>
-      <Footer/>
+      
+      
+        <Hero />
+        <Mission />
+        <div className="flex flex-wrap">
+          
+        <Cards imageUrl={baccha} des="Help us Throuhp A hand"/>
+        <Cards imageUrl={baccha} des="Help us Throuhp A hand"/>
+        
+        <Cards imageUrl={baccha} des="Help us Throuhp A hand"/>
+        
+        <Cards imageUrl={baccha} des="Help us Throuhp A hand"/>
+        </div>
+        
+   
+
+      <Footer />
     </div>
   );
 };
