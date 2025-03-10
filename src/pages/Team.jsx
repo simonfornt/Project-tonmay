@@ -2,13 +2,15 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import tonmay from "../assets/tonmoy.jpg";
+import Gallery from "../components/Gallery";
 
-// Move `tonmoy.jpg` to `public/assets/tonmoy.jpg` and use a direct path
+
+
 const teamMembers = [
     {
       name: "Tanmoy Modal",
       role: "CEO & Founder",
-      image: {tonmay}, // ✅ Fixed: Direct Path
+      image: tonmay, 
     },
     {
       name: "Jane Smith",
@@ -50,6 +52,7 @@ function Team() {
                     ))}
                 </div>
             </div>
+            <Gallery/>
             <Footer />
         </>
     );

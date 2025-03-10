@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Stat from "../components/Stat";
 
 const sections = [
   {
@@ -71,6 +72,7 @@ const VisionPrinciplesGrid = () => {
         ))}
       </div>
     </div>
+    <Stat/>
     <Footer/>
    </>
   );

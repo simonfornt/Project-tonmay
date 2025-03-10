@@ -2,6 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
+   <>
     <footer className="bg-gray-900 text-white text-center py-3">
       <p className="text-sm">
         © {new Date().getFullYear()} Shuddhangon. All Rights Reserved.
@@ -10,6 +11,7 @@ const Footer = () => {
         Developed by <span className="font-semibold text-blue-400">S M Simon Piar</span>
       </p>
     </footer>
+   </>
   );
 };
 
