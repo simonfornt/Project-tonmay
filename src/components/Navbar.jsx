@@ -25,6 +25,7 @@ const Navbar = () => {
             <ul className="flex flex-col md:flex-row items-center gap-6">
               <li><Link to="/" className="hover:text-teal-800 font-semibold transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-teal-800 font-semibold transition-colors">About Us</Link></li>
+              <li><Link to="/donation" className="hover:text-teal-800 font-semibold transition-colors">Donation</Link></li>
               <li><Link to="/team" className="hover:text-teal-800 font-semibold transition-colors">Team</Link></li>
               <li><Link to="/contact" className="hover:text-teal-800 font-semibold transition-colors">Contact</Link></li>
             </ul>
@@ -44,6 +45,7 @@ const Navbar = () => {
           <ul className="pb-4 space-y-4">
             <li><Link to="/" className="block py-2 hover:text-gray-300">Home</Link></li>
             <li><Link to="/about" className="block py-2 hover:text-gray-300">About Us</Link></li>
+            <li><Link to="/donation" className="hover:text-teal-800 font-semibold transition-colors">Donation</Link></li>
             <li><Link to="/team" className="block py-2 hover:text-gray-300">Team</Link></li>
             <li><Link to="/contact" className="block py-2 hover:text-gray-300">Contact</Link></li>
             <li> <Link  to="/login"  className="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-gray-100"> Login</Link> </li>

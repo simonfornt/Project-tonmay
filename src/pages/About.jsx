@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Stat from "../components/Stat";
+import FAQSection from "../components/Faq";
+
 
 const sections = [
   { 
@@ -88,6 +90,8 @@ const VisionPrinciplesGrid = () => {
       </main>
 
       <Stat />
+      <FAQSection/>
+    
       <Footer />
     </>
   );
