@@ -33,37 +33,28 @@ const FAQSection = () => {
           Frequently Asked Questions
         </h2>
 
-        <div className="space-y-6">
-          {faqs.map((faq, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200"
-            >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center p-6 md:p-8 focus:outline-none"
-                aria-expanded={activeIndex === index}
-                aria-controls={`faq-content-${index}`}
-              >
-                <h3 className="text-lg md:text-xl font-semibold text-gray-800 text-left">
-                  {faq.question}
-                </h3>
-                <i className={`fas fa-chevron-${
-                  activeIndex === index ? 'up' : 'down'
-                } text-teal-600 text-xl ml-4 transition-transform duration-300`} />
-              </button>
+            {/* FAQ Function */}
 
-              <div
-                id={`faq-content-${index}`}
-                className={`overflow-hidden transition-all duration-300 ${
-                  activeIndex === index ? 'max-h-96' : 'max-h-0'
-                }`}
-              >
+        <div className="space-y-6">{faqs.map((faq, index) => (
+            <div key={index}className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200">
+
+     <button  onClick={() => toggleFAQ(index)} className="w-full flex justify-between items-center p-6 md:p-8 focus:outline-none"
+                aria-expanded={activeIndex === index} aria-controls={`faq-content-${index}`}>
+
+                <h3 className="text-lg md:text-xl font-semibold text-gray-800 text-left"> {faq.question} </h3>
+
+          <i className={`fas fa-chevron-${ activeIndex === index ? 'up' : 'down' } text-teal-600 text-xl ml-4 transition-transform duration-300`} />
+    </button>
+
+    {/*  */}
+
+          <div id={`faq-content-${index}`}  className={`overflow-hidden transition-all duration-300 ${
+                  activeIndex === index ? 'max-h-96' : 'max-h-0'  }`} >
+
                 <div className="px-6 md:px-8 pb-6 md:pb-8">
-                  <p className="text-gray-600 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                 </div>
+
               </div>
             </div>
           ))}

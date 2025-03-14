@@ -8,12 +8,9 @@ const Hero = () => {
     <section className="relative h-screen min-h-[600px] flex items-center justify-center">
       {/* Background with optimized mobile scaling */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <img 
-          src={heroImage} 
-          alt="Children in need" 
+        <img src={heroImage} alt="Children in need" 
           className="w-full h-full object-cover md:transform md:scale-100 md:transition-transform md:duration-1000"
-          loading="lazy"
-        />
+          loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
       </div>
 
@@ -34,10 +31,8 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-6 md:mt-8">
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 text-base sm:text-lg hover:scale-105"
-            >
+            <button onClick={() => setIsModalOpen(true)}
+              className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 text-base sm:text-lg hover:scale-105" >
               <i className="fas fa-heart text-lg sm:text-xl mr-1 sm:mr-2"></i>
               <span>Make a Difference Now</span>
             </button>
