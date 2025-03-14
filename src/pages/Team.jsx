@@ -36,7 +36,7 @@ function Team() {
             <div className="py-16 bg-gray-100"> {/* ✅ Fixed: `bg-gray-100` */}
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-4xl font-bold text-gray-800">Meet our Team Members</h2>
-                    <p className="text-gray-600 mt-4">Dedicated professionals working together to bring success.</p>
+                    <p className="text-gray-600 mt-4 px-1">Dedicated professionals working together to bring success.</p>
                 </div>
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-6">
                     {teamMembers.map((member, index) => (
