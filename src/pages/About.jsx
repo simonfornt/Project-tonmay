@@ -7,19 +7,20 @@ import FAQSection from "../components/Faq";
 
 const sections = [
   { 
-    title: "VISION",
+    title: " Holistic empowerment",
     icon: "fa-solid fa-eye",
-    description: "Envisioning a Bangladesh where every person has equal opportunities for growth and development..."
+    description: "We believe in a comprehensive and sustainable approach to empowerment, addressing the multifaceted challenges of disadvantaged communities.  Our initiatives encompass education, healthcare, livelihoods and community development to create lasting and positive change."
+
   },
   {
-    title: "Holistic Empowerment",
+    title: "compassion",
     icon: "fa-solid fa-hands-holding-circle",
-    description: "We take a comprehensive approach to empowerment..."
+    description: "Our actions are guided by deep compassion for those in need.  We empathize with the struggles of the underprivileged and are committed to making a meaningful difference in their lives."
   },
   {
-    title: "Compassion",
+    title: "cooperation",
     icon: "fa-solid fa-heart-pulse",
-    description: "Our actions are guided by deep compassion..."
+    description: "We recognize the power of collaboration to create substantial impact.  By working together with communities, partners and stakeholders, we aim to amplify our efforts and achieve greater results."
   },
   {
     title: "Cooperation",

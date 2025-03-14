@@ -5,8 +5,9 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "How can I make a donation?",
-      answer: "You can donate through our secure online portal, bank transfer, or mobile payment services like Bkash. All donation options are available on our donation page."
+      question: "What is Shudhagon?",
+      answer: "Founded in 2023, Shuddhangan is a non-profit service voluntary educational institution in Bangladesh dedicated to serving underprivileged children.  Focused on youth power, we actively work to eradicate poverty, ensure access to education, healthcare and nutrition and overcome socio-economic challenges.  Our initiatives include financially empowering marginalized communities, providing free education to underprivileged children, providing emergency healthcare and extending relief assistance to the needy.  Our ultimate goal is to empower the underprivileged, promote self-sufficiency and eradicate poverty and illiteracy from Bangladesh."
+
     },
     {
       question: "Is my donation tax-deductible?",

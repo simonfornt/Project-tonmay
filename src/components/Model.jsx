@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Model = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const closeModal = () => setIsModalOpen(false); // Function to close the modal
+  
 
   return (
     <>
@@ -39,19 +39,13 @@ const Model = () => {
 
             <div className="space-y-4 sm:space-y-6">
               <div className="bg-teal-50 p-4 sm:p-6 rounded-lg sm:rounded-xl">
-                <p className="text-base sm:text-lg font-semibold text-teal-700">
-                  Bkash Payment Gateway:
-                </p>
-                <p className="text-xl sm:text-2xl font-mono text-gray-900 mt-1 sm:mt-2">
-                  0184 9825 8215
-                </p>
+                <p className="text-base sm:text-lg font-semibold text-teal-700">  Bkash Payment Gateway:</p>
+                <p className="text-xl sm:text-2xl font-mono text-gray-900 mt-1 sm:mt-2">  0184 9825 8215</p>
               </div>
 
-              <button
-                onClick={() => setIsModalOpen(false)}
+              <button onClick={() => setIsModalOpen(false)}
                 className="w-full px-5 py-3 sm:px-6 sm:py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-lg sm:rounded-xl
-                         transition-all font-semibold text-base sm:text-lg hover:scale-[1.02]"
-              >
+                         transition-all font-semibold text-base sm:text-lg hover:scale-[1.02]" >
                 Confirm Donation
               </button>
             </div>

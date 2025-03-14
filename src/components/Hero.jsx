@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import heroImage from '../assets/childern.jpg';
-
+import Model from "./Model";
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 

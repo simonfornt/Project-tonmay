@@ -30,9 +30,12 @@ const Mission = () => {
           Your Support Is Really Powerful.
         </h2>
         <p className="text-gray-600 text-base sm:text-lg leading-relaxed sm:leading-loose">
-          The secret to happiness lies in helping others. Never underestimate
-          the difference YOU can make in the lives of the poor, the abused, and
-          the helpless.
+        To actively contribute to the development of underprivileged communities in Bangladesh.
+          Since our founding in 2023, we have dedicated ourselves to addressing important issues
+           such as poverty alleviation, education, health and nutrition, human rights and environmental 
+           sustainability.  We strive to create a positive impact by creating a platform for youth to
+            realize their ideas and contribute to building a more beautiful and socially stable Bangladesh.
+
         </p>
         <button className="px-6 py-3 sm:px-8 sm:py-4 bg-teal-500 hover:bg-teal-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base">
           Read More

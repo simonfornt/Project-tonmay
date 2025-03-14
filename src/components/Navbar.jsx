@@ -9,7 +9,7 @@ const Navbar = () => {
   const isActive = (path) => pathname === path;
 
   return (
-    <nav className="bg-gray-400 shadow-lg w-full">
+    <nav className="bg-sky-200 shadow-lg w-full sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -17,7 +17,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 rounded-md text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white"
+            className="md:hidden p-2 rounded-md text-white hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-white"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -28,64 +28,34 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-6">
             <ul className="flex flex-col md:flex-row items-center gap-6">
               <li>
-                <NavLink 
-                  to="/" 
-                  className={`hover:text-teal-800 font-semibold transition-colors ${
-                    isActive("/") ? "text-teal-800 font-bold underline" : ""
-                  }`}
-                >
+                <NavLink  to="/" className={`hover:text-blue-500 font-semibold transition-colors ${  isActive("/") ? "text-blue-700 font-semibold underline" : ""  }`} >
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink 
-                  to="/about" 
-                  className={`hover:text-teal-800 font-semibold transition-colors ${
-                    isActive("/about") ? "text-teal-800 font-bold underline" : ""
-                  }`}
-                >
+                <NavLink  to="/about"  className={`hover:text-blue-500 font-semibold transition-colors ${ isActive("/about") ? "text-blue-700 font-semibold underline" : ""  }`}>
                   About Us
                 </NavLink>
               </li>
               <li>
-                <NavLink 
-                  to="/donation" 
-                  className={`hover:text-teal-800 font-semibold transition-colors ${
-                    isActive("/donation") ? "text-teal-800 font-bold underline" : ""
-                  }`}
-                >
+                <NavLink   to="/donation" className={`hover:text-blue-500 font-semibold transition-colors ${  isActive("/donation") ? "text-blue-700 font-semibold underline" : "" }`} >
                   Donation
                 </NavLink>
               </li>
               <li>
-                <NavLink 
-                  to="/team" 
-                  className={`hover:text-teal-800 font-semibold transition-colors ${
-                    isActive("/team") ? "text-teal-800 font-bold underline" : ""
-                  }`}
-                >
+                <NavLink  to="/team"  className={`hover:text-blue-5000 font-semibold transition-colors ${isActive("/team") ? "text-blue-700 font-semibold underline" : "" }`}>
                   Team
                 </NavLink>
               </li>
               <li>
-                <NavLink 
-                  to="/contact" 
-                  className={`hover:text-teal-800 font-semibold transition-colors ${
-                    isActive("/contact") ? "text-teal-800 font-bold underline" : ""
-                  }`}
-                >
+                <NavLink to="/contact" className={`hover:text-blue-500 font-semibold transition-colors ${ isActive("/contact") ? "text-blue-700 font-semibold underline" : ""}`}>
                   Contact
                 </NavLink>
               </li>
             </ul>
 
             {/* Login Button */}
-            <NavLink 
-              to="/login" 
-              className={`bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-gray-100 transition-colors ${
-                isActive("/login") ? "bg-orange-700" : ""
-              }`}
-            >
+            <NavLink  to="/login"  className={`bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-red-700 transition-colors ${ isActive("/login") ? "bg-orange-700" : ""  }`} >
               Login
             </NavLink>
           </div>
