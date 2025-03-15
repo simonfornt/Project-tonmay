@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Model from "../components/Model";
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -132,7 +132,7 @@ const ContactForm = () => {
         </div>
       </div>
     </section>
-    <Model/>
+ 
     <Footer/>
     </>
   );

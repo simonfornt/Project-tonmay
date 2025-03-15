@@ -9,23 +9,25 @@ import Banner from "../components/Banner";
 
 
 
+
 const Home = () => {
+
+
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
-      
-        <Hero />
+       <Hero />
         <Mission />
         <div className="flex flex-wrap">
           
         <Cards imageUrl={baccha} des="Help us Throuhp A hand"/>
         <Cards imageUrl={baccha} des="Help us Throuhp A hand"/>
-        
-        <Cards imageUrl={baccha} des="Help us Throuhp A hand"/>
-        
+         <Cards imageUrl={baccha} des="Help us Throuhp A hand"/>
         <Cards imageUrl={baccha} des="Help us Throuhp A hand"/>
         </div>
+
+       
         
    <Banner/>
    

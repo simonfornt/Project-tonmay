@@ -1,21 +1,22 @@
 import React from "react";
-import Model from "./Model";
 
 const DonationCard = ({ imageUrl, des }) => {
-  const handleDonateClick = () => {
-    alert("Send money by Bkash 01724239801");
+  // Function to handle the donation button click
+  const handleDonation = () => {
+    alert("For donation, send money to 4415464");
   };
 
   return (
     <div className="w-full md:w-96 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl 
       transition-shadow duration-300 mx-auto mb-10 hover:scale-[1.02] transition-transform
       border border-gray-100">
+      
       {/* Image Section */}
       <div className="relative aspect-square overflow-hidden">
-        <img
-          src={imageUrl}
-          alt="Donation"
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+        <img 
+          src={imageUrl} 
+          alt="Donation" 
+          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
         />
       </div>
 
@@ -28,16 +29,16 @@ const DonationCard = ({ imageUrl, des }) => {
           </p>
         </div>
 
-        {/* Donation Button with Font Awesome Icon */}
-        <button onClick={handleDonateClick} onTouchStart={handleDonateClick} 
+        {/* Donation Button */}
+        <button  
+          onClick={handleDonation}  // Alert on button click
           className="w-full bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-semibold 
             py-4 px-8 rounded-xl hover:from-teal-600 hover:to-cyan-700 transition-all duration-300
             focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2
             flex items-center justify-center gap-3"
         >
           <i className="fas fa-hand-holding-heart text-xl"></i>
-          {/* <span className="text-lg">Donate Now</span> */}
-        <span>Donate now</span>
+          <span>Donate Now</span>
         </button>
       </div>
     </div>
