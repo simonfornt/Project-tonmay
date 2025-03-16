@@ -1,20 +1,71 @@
 import React, { useState } from "react";
-import heroImage from '../assets/childern.jpg';
+import heroImage1 from '../assets/childern.jpg';
+import heroImage2 from '../assets/mmc.jpg'; // Add more images
+import heroImage3 from '../assets/picnic.jpg';
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const images = [heroImage1, heroImage2, heroImage3];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
+  };
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center">
-      {/* Background with optimized mobile scaling */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <img src={heroImage} alt="Children in need" 
-          className="w-full h-full object-cover md:transform md:scale-100 md:transition-transform md:duration-1000"
-          loading="lazy" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
+    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+      {/* Carousel Container */}
+      <div className="absolute inset-0 z-0">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              currentSlide === index ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img
+              src={image}
+              alt="Children in need"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
+          </div>
+        ))}
       </div>
 
-      {/* Content with responsive typography */}
+      {/* Carousel Controls */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
+      >
+        <i className="fas fa-chevron-left text-white text-xl"></i>
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
+      >
+        <i className="fas fa-chevron-right text-white text-xl"></i>
+      </button>
+
+      {/* Carousel Indicators */}
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2 z-20">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-colors ${
+              currentSlide === index ? 'bg-white' : 'bg-gray-400'
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Original Content (Unchanged) */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
           <h1 className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold leading-snug md:leading-tight animate-fadeInUp">
@@ -40,7 +91,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Responsive Modal */}
+      {/* Original Modal (Unchanged) */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm animate-fadeIn">
           <div 
