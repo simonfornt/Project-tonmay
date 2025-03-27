@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 const Login = () => {
   return (
     <div>
-      <Navbar />
+      
       <div className="container mx-auto p-6 text-center">
         <h1 className="text-3xl font-bold mb-4">Login</h1>
         <form className="bg-gray-100 p-6 rounded shadow-lg w-96 mx-auto">

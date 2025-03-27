@@ -33,27 +33,27 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-6">
             <ul className="flex flex-col md:flex-row items-center gap-6">
               <li>
-                <NavLink  to="/" className={`hover:text-blue-500 font-semibold transition-colors ${  isActive("/") ? "text-blue-700 font-semibold underline" : ""  }`} >
+                <NavLink  to="/" className={`hover:text-blue-500 text-white font-semibold transition-colors ${  isActive("/") ? "text-blue-700 font-semibold underline" : ""  }`} >
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink  to="/about"  className={`hover:text-blue-500 font-semibold transition-colors ${ isActive("/about") ? "text-blue-700 font-semibold underline" : ""  }`}>
+                <NavLink  to="/about"  className={`hover:text-blue-500 text-white font-semibold transition-colors ${ isActive("/about") ? "text-blue-700 font-semibold underline" : ""  }`}>
                   About Us
                 </NavLink>
               </li>
               <li>
-                <NavLink   to="/donation" className={`hover:text-blue-500 font-semibold transition-colors ${  isActive("/donation") ? "text-blue-700 font-semibold underline" : "" }`} >
+                <NavLink   to="/donation" className={`hover:text-blue-500 text-white font-semibold transition-colors ${  isActive("/donation") ? "text-blue-700 font-semibold underline" : "" }`} >
                   Donation
                 </NavLink>
               </li>
               <li>
-                <NavLink  to="/team"  className={`hover:text-blue-5000 font-semibold transition-colors ${isActive("/team") ? "text-blue-700 font-semibold underline" : "" }`}>
+                <NavLink  to="/team"  className={`hover:text-blue-5000 text-white font-semibold  transition-colors ${isActive("/team") ? "text-blue-700 font-semibold underline" : "" }`}>
                   Team
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/contact" className={`hover:text-blue-500 font-semibold transition-colors ${ isActive("/contact") ? "text-blue-700 font-semibold underline" : ""}`}>
+                <NavLink to="/contact" className={`hover:text-blue-500 text-white font-semibold transition-colors ${ isActive("/contact") ? "text-blue-700 font-semibold underline" : ""}`}>
                   Contact
                 </NavLink>
               </li>

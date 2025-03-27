@@ -6,11 +6,14 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Donation from "./pages/Donation";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+
 
 
 function App() {
   return (
     <>
+  <Navbar/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About/>} />
@@ -20,7 +23,7 @@ function App() {
       <Route path="/donation" element={<Donation/>}/>
     
     </Routes>
-    
+    <Footer/>
     </>
     
   );

@@ -26,7 +26,7 @@ const ContactForm = () => {
 
   return (
     <>
-    <Navbar/>
+   
     <section className="py-16 bg-white px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
         <h3 className="text-gray-800 font-semibold text-lg">Get In Touch</h3>
@@ -135,7 +135,7 @@ const ContactForm = () => {
     </section>
 
  
-    <Footer/>
+   
     </>
   );
 };

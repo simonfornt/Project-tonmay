@@ -7,10 +7,10 @@ import ImpactCalu from "../components/ImpactCalu";
 const  Donation = () =>{
     return(
         <>
-        <Navbar/>
+      
         <DonationTracker/>
         <ImpactCalu/>
-        <Footer/>
+       
         </>
     )
 }

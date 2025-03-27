@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const principles = [
   {
@@ -35,8 +36,8 @@ const principles = [
 function About() {
   return (
     <>
-      <Navbar />
-      <div className='max-w-7xl mx-auto mt-10 px-4'>
+      {/* <Navbar /> */}
+      <div className='max-w-7xl mx-auto my-10 px-4'>
         <div className='flex flex-col lg:flex-row gap-9'>
           <div className='lg:basis-3/5'>
             <div className='mb-8'>
@@ -93,6 +94,7 @@ function About() {
           </div>
         </div>
       </div>
+     
     </>
   );
 }

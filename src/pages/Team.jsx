@@ -47,7 +47,7 @@ const teamMembers = [
 function Team() {
     return (
         <>
-            <Navbar />
+          
             <div className="py-16 bg-gray-100"> {/* ✅ Fixed: `bg-gray-100` */}
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-4xl font-bold text-gray-800">Meet our Team Members</h2>
@@ -73,7 +73,7 @@ function Team() {
                 </div>
             </div>
             <Gallery/>
-            <Footer />
+            
         </>
     );
 }
