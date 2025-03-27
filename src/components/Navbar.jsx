@@ -4,6 +4,7 @@ import logo from "../assets/logo-logo1.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [projectDropdown, setProjectDropdown] = useState(false);
   const { pathname } = useLocation();
 
   // Function to check active link
@@ -14,14 +15,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          {/* <h1 className="text-3xl font-extrabold tracking-wide"></h1> */}
           <div className="flex items-center gap-3 text-3xl font-bold ">
-           <img className="size-16" src={logo} alt="" />
-           <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">Suddhagon</span>
-            </div>
+            <img className="size-16" src={logo} alt="" />
+            <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+              Suddhagon
+            </span>
+          </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden p-2 rounded-md text-black hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-white"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
@@ -30,106 +32,113 @@ const Navbar = () => {
           </button>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className={`md:flex items-center space-x-6 ${isOpen ? "flex flex-col absolute top-16 left-0 w-full bg-orange-500 py-4 md:py-0" : "hidden"}`}>
             <ul className="flex flex-col md:flex-row items-center gap-6">
               <li>
-                <NavLink  to="/" className={`hover:text-blue-500 text-white font-semibold transition-colors ${  isActive("/") ? "text-blue-700 font-semibold underline" : ""  }`} >
+                <NavLink
+                  to="/"
+                  className={`hover:text-blue-500 text-white font-semibold transition-colors ${
+                    isActive("/") ? "text-blue-700 font-semibold underline" : ""
+                  }`}
+                  onClick={() => isOpen && setIsOpen(false)}
+                >
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink  to="/about"  className={`hover:text-blue-500 text-white font-semibold transition-colors ${ isActive("/about") ? "text-blue-700 font-semibold underline" : ""  }`}>
+                <NavLink
+                  to="/about"
+                  className={`hover:text-blue-500 text-white font-semibold transition-colors ${
+                    isActive("/about") ? "text-blue-700 font-semibold underline" : ""
+                  }`}
+                  onClick={() => isOpen && setIsOpen(false)}
+                >
                   About Us
                 </NavLink>
               </li>
-              <li>
-                <NavLink   to="/donation" className={`hover:text-blue-500 text-white font-semibold transition-colors ${  isActive("/donation") ? "text-blue-700 font-semibold underline" : "" }`} >
-                  Donation
-                </NavLink>
+              <li className="relative">
+                <button
+                  className="hover:text-blue-500 text-white font-semibold transition-colors"
+                  onClick={() => setProjectDropdown(!projectDropdown)}
+                >
+                  Projects ▼
+                </button>
+                {projectDropdown && (
+                  <ul className="absolute bg-white shadow-md rounded-md mt-2 w-40">
+                    <li>
+                      <NavLink
+                        to="/projects/education"
+                        className="block px-4 py-2 hover:bg-gray-200"
+                        onClick={() => isOpen && setIsOpen(false)}
+                      >
+                        Education
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/projects/health"
+                        className="block px-4 py-2 hover:bg-gray-200"
+                        onClick={() => isOpen && setIsOpen(false)}
+                      >
+                        Health
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/projects/environment"
+                        className="block px-4 py-2 hover:bg-gray-200"
+                        onClick={() => isOpen && setIsOpen(false)}
+                      >
+                        Environment
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/projects/community"
+                        className="block px-4 py-2 hover:bg-gray-200"
+                        onClick={() => isOpen && setIsOpen(false)}
+                      >
+                        Community Support
+                      </NavLink>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li>
-                <NavLink  to="/team"  className={`hover:text-blue-5000 text-white font-semibold  transition-colors ${isActive("/team") ? "text-blue-700 font-semibold underline" : "" }`}>
+                <NavLink
+                  to="/team"
+                  className={`hover:text-blue-500 text-white font-semibold transition-colors ${
+                    isActive("/team") ? "text-blue-700 font-semibold underline" : ""
+                  }`}
+                  onClick={() => isOpen && setIsOpen(false)}
+                >
                   Team
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/contact" className={`hover:text-blue-500 text-white font-semibold transition-colors ${ isActive("/contact") ? "text-blue-700 font-semibold underline" : ""}`}>
+                <NavLink
+                  to="/contact"
+                  className={`hover:text-blue-500 text-white font-semibold transition-colors ${
+                    isActive("/contact") ? "text-blue-700 font-semibold underline" : ""
+                  }`}
+                  onClick={() => isOpen && setIsOpen(false)}
+                >
                   Contact
                 </NavLink>
               </li>
             </ul>
 
             {/* Login Button */}
-            <NavLink  to="/login"  className={`bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-red-700 transition-colors ${ isActive("/login") ? "bg-orange-700" : ""  }`} >
+            <NavLink
+              to="/login"
+              className={`bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-red-700 transition-colors ${
+                isActive("/login") ? "bg-orange-700" : ""
+              }`}
+              onClick={() => isOpen && setIsOpen(false)}
+            >
               Login
             </NavLink>
           </div>
-        </div>
-
-        {/* Mobile Menu */}
-        <div className={`md:hidden ${isOpen ? "block" : "hidden"} transition-all duration-300`}>
-          <ul className="pb-4 space-y-4">
-            <li>
-              <NavLink 
-                to="/" 
-                className={`block py-2 hover:text-gray-300 ${
-                  isActive("/") ? "text-blue-600 font-bold" : ""
-                }`}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/about" 
-                className={`block py-2 hover:text-gray-300 ${
-                  isActive("/about") ? "text-blue-600 font-bold" : ""
-                }`}
-              >
-                About Us
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/donation" 
-                className={`block py-2 hover:text-gray-300 ${
-                  isActive("/donation") ? "text-blue-600 font-bold" : ""
-                }`}
-              >
-                Donation
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/team" 
-                className={`block py-2 hover:text-gray-300 ${
-                  isActive("/team") ? "text-blue-600 font-bold" : ""
-                }`}
-              >
-                Team
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/contact" 
-                className={`block py-2 hover:text-gray-300 ${
-                  isActive("/contact") ? "text-blue-600 font-bold" : ""
-                }`}
-              >
-                Contact
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/login" 
-                className={`inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-gray-100 ${
-                  isActive("/login") ? "bg-gray-100 text-blue-700" : ""
-                }`}
-              >
-                Login
-              </NavLink>
-            </li>
-          </ul>
         </div>
       </div>
     </nav>
