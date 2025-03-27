@@ -1,101 +1,100 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Stat from "../components/Stat";
-import FAQSection from "../components/Faq";
+import React from 'react';
+import Navbar from '../components/Navbar';
 
-
-const sections = [
-  { 
-    title: " Holistic empowerment",
-    icon: "fa-solid fa-eye",
-    description: "We believe in a comprehensive and sustainable approach to empowerment, addressing the multifaceted challenges of disadvantaged communities.  Our initiatives encompass education, healthcare, livelihoods and community development to create lasting and positive change."
-
+const principles = [
+  {
+    id: 1,
+    title: 'Empowerment',
+    icon: 'fa-solid fa-hands-holding-circle',
+    description:
+      'We believe in a comprehensive and sustainable approach to empowerment, addressing the multifaceted challenges of disadvantaged communities. Our initiatives encompass education, healthcare, livelihoods, and community development to create lasting and positive change.',
   },
   {
-    title: "compassion",
-    icon: "fa-solid fa-hands-holding-circle",
-    description: "Our actions are guided by deep compassion for those in need.  We empathize with the struggles of the underprivileged and are committed to making a meaningful difference in their lives."
+    id: 2,
+    title: 'Education',
+    icon: 'fa-solid fa-book-open',
+    description:
+      'Providing access to quality education for underprivileged children to break the cycle of poverty and create opportunities for a better future.',
   },
   {
-    title: "cooperation",
-    icon: "fa-solid fa-heart-pulse",
-    description: "We recognize the power of collaboration to create substantial impact.  By working together with communities, partners and stakeholders, we aim to amplify our efforts and achieve greater results."
+    id: 3,
+    title: 'Healthcare',
+    icon: 'fa-solid fa-heartbeat',
+    description:
+      'Ensuring emergency healthcare and medical support for the marginalized, aiming for a healthier and more resilient society.',
   },
   {
-    title: "Cooperation",
-    icon: "fa-solid fa-handshake",
-    description: "We recognize the power of collaboration..."
-  },
-  {
-    title: "Sustainability",
-    icon: "fa-solid fa-leaf",
-    description: "Sustainability is at the core of our approach..."
-  },
-  {
-    title: "Equal Opportunity",
-    icon: "fa-solid fa-scale-balanced",
-    description: "We advocate for a future where everyone has the opportunity..."
-  },
-  {
-    title: "Youth Empowerment",
-    icon: "fa-solid fa-children",
-    description: "We provide a platform for the youth..."
+    id: 4,
+    title: 'Sustainability',
+    icon: 'fa-solid fa-leaf',
+    description:
+      'Promoting sustainable development practices to protect the environment and ensure a better future for generations to come.',
   },
 ];
 
-const InfoCard = ({ title, icon, description }) => {
-  return (
-    <div className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 
-                   border border-gray-100 hover:border-teal-100 h-full flex flex-col items-center
-                   hover:-translate-y-2 cursor-default">
-      {/* Icon Container */}
-      <div className="mb-6 w-20 h-20 rounded-2xl bg-teal-50 flex items-center justify-center
-                     group-hover:bg-teal-500 transition-colors duration-300">
-        <i className={`${icon} text-3xl text-teal-500 group-hover:text-white`}></i>
-      </div>
-
-      <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">{title}</h2>
-      <p className="text-gray-600 text-center leading-relaxed flex-1">{description}</p>
-    </div>
-  );
-};
-
-const VisionPrinciplesGrid = () => {
+function About() {
   return (
     <>
       <Navbar />
-      
-      <main className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Vision & Core Principles
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Guiding values that shape our mission for a better tomorrow
-            </p>
+      <div className='max-w-7xl mx-auto mt-10 px-4'>
+        <div className='flex flex-col lg:flex-row gap-9'>
+          <div className='lg:basis-3/5'>
+            <div className='mb-8'>
+              <h1 className='text-orange-400 font-bold text-2xl'>About Us</h1>
+              <p>
+                Founded in 2023, Shuddhangan is a non-profit voluntary educational institution in Bangladesh dedicated to
+                serving underprivileged children. Focused on youth power, we actively work to eradicate poverty, ensure access
+                to education, healthcare, and nutrition, and overcome socio-economic challenges. Our initiatives include
+                financially empowering marginalized communities, providing free education, emergency healthcare, and relief
+                assistance. Our ultimate goal is to empower the underprivileged, promote self-sufficiency, and eradicate
+                poverty and illiteracy from Bangladesh.
+              </p>
+            </div>
+            <div className='mb-8'>
+              <h1 className='text-orange-400 font-bold text-2xl'>Mission</h1>
+              <p>
+                To actively contribute to the development of underprivileged communities in Bangladesh. Since our founding in
+                2023, we have dedicated ourselves to addressing important issues such as poverty alleviation, education,
+                health and nutrition, human rights, and environmental sustainability. We strive to create a positive impact by
+                creating a platform for youth to realize their ideas and contribute to building a more socially stable
+                Bangladesh.
+              </p>
+            </div>
+            <div>
+              <h1 className='text-orange-400 font-bold text-2xl'>Vision</h1>
+              <p>
+                Envisioning a Bangladesh where every person, regardless of their background, has equal opportunities for growth
+                and development. We aspire to create a society where poverty is eradicated, education is accessible to all,
+                healthcare is a basic right, human rights are protected, and the environment is preserved for future
+                generations. Through our holistic and sustainable approach, we aim to contribute to a transformed and
+                empowered Bangladesh.
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sections.map((section, index) => (
-              <InfoCard 
-                key={index}
-                title={section.title}
-                icon={section.icon}
-                description={section.description}
-              />
-            ))}
+          {/* Right Section */}
+          <div className='lg:basis-2/5'>
+            <h1 className='text-3xl text-orange-400 font-bold mb-8'>Principles</h1>
+            <div>
+              {principles.map((principle) => (
+                <div key={principle.id} className='flex items-center mb-7 gap-5'>
+                  <div className='text-center'>
+                    <span className='text-orange-500 text-5xl'>
+                      <i className={principle.icon}></i>
+                    </span>
+                    <p className='text-[12px]'>{principle.title}</p>
+                  </div>
+                  <div>
+                    <p className='text-[10px]'>{principle.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </main>
-
-      <Stat />
-      <FAQSection/>
-    
-      <Footer />
+      </div>
     </>
   );
-};
+}
 
-export default VisionPrinciplesGrid;
+export default About;

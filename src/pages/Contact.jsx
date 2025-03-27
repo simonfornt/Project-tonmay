@@ -133,7 +133,7 @@ const ContactForm = () => {
         </div>
       </div>
     </section>
-<TeacherDirectory/>
+
  
     <Footer/>
     </>

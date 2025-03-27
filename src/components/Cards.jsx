@@ -1,48 +1,36 @@
-import React from "react";
+import React from 'react';
 
-const DonationCard = ({ imageUrl, des }) => {
-  // Function to handle the donation button click
-  const handleDonation = () => {
-    alert("For donation, send money to 4415464");
-  };
+function Cards() {
+  const cardData = [
+    { id: 1, title: 'Livelihood', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSMqh-6AuWFtq-e2p_Wp8AQTqeUjGvVIXpkw&s' },
+    { id: 2, title: 'Education', img: 'https://www.indiaspend.com/h-upload/2024/05/31/1275088-education-in-rural-india-1500.jpg' },
+    { id: 3, title: 'Healthcare', img: 'https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2021/11/shutterstock_340094927.jpg' },
+    { id: 4, title: 'Environment', img: 'https://www.aimsindia.com/wp-content/uploads/2022/06/world-environment.png' },
+    { id: 5, title: 'Community', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSMqh-6AuWFtq-e2p_Wp8AQTqeUjGvVIXpkw&s' },
+    { id: 6, title: 'Innovation', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ82iWdRNIeGdnL71KP6wHHMUNqmCu1BGoBFg&s' }
+  ];
 
   return (
-    <div className="w-full md:w-96 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl 
-      transition-shadow duration-300 mx-auto mb-10 hover:scale-[1.02] transition-transform
-      border border-gray-100">
-      
-      {/* Image Section */}
-      <div className="relative aspect-square overflow-hidden">
-        <img 
-          src={imageUrl} 
-          alt="Donation" 
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-        />
-      </div>
-
-      {/* Content Section */}
-      <div className="p-8 md:p-10 space-y-6">
-        <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-teal-600">Support Our Cause</h3>
-          <p className="text-gray-600 leading-relaxed text-justify">
-            {des}
-          </p>
-        </div>
-
-        {/* Donation Button */}
-        <button  
-          onClick={handleDonation}  // Alert on button click
-          className="w-full bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-semibold 
-            py-4 px-8 rounded-xl hover:from-teal-600 hover:to-cyan-700 transition-all duration-300
-            focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2
-            flex items-center justify-center gap-3"
-        >
-          <i className="fas fa-hand-holding-heart text-xl"></i>
-          <span>Donate Now</span>
-        </button>
+    <div className="w-7/8 mx-auto px-4 py-10">
+      <h2 className="text-center text-3xl font-bold text-gray-800 mb-8">Our Focus Areas</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {cardData.map((card) => (
+          <div
+            key={card.id}
+            className="bg-white rounded-xl overflow-hidden shadow-lg border shadow-orange-200 border-gray-200 hover:shadow-2xl transition duration-300"
+          >
+            <img className="w-full h-auto object-cover object-center"
+              src={card.img}
+              alt={card.title}
+            />
+            <div className="p-5 text-center">
+              <h3 className="text-lg font-semibold text-gray-700">{card.title}</h3>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
-};
+}
 
-export default DonationCard;
+export default Cards

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import logo from "../assets/logo-logo1.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,15 +10,19 @@ const Navbar = () => {
   const isActive = (path) => pathname === path;
 
   return (
-    <nav className="bg-sky-200 shadow-lg w-full sticky top-0 z-50">
+    <nav className="bg-orange-500 shadow-lg w-full sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <h1 className="text-3xl font-extrabold tracking-wide">Shuddhangon</h1>
+          {/* <h1 className="text-3xl font-extrabold tracking-wide"></h1> */}
+          <div className="flex items-center gap-3 text-3xl font-bold ">
+           <img className="size-16" src={logo} alt="" />
+           <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">Suddhagon</span>
+            </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 rounded-md text-white hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-white"
+            className="md:hidden p-2 rounded-md text-black hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-white"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >

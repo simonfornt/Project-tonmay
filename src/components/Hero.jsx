@@ -17,7 +17,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative md:h-dvh min-h-[400px] flex items-center justify-center overflow-hidden">
       {/* Carousel Container */}
       <div className="absolute inset-0 z-0">
         {images.map((image, index) => (
@@ -33,7 +33,7 @@ const Hero = () => {
               className="w-full h-full object-cover"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div> */}
           </div>
         ))}
       </div>
@@ -66,28 +66,9 @@ const Hero = () => {
       </div>
 
       {/* Original Content (Unchanged) */}
-      <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
+      <div className="">
         <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
-          <h1 className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold leading-snug md:leading-tight animate-fadeInUp">
-            <span className="bg-gradient-to-r from-teal-400 to-cyan-500 bg-clip-text text-transparent">
-              Empower Change
-            </span>
-            <br className="hidden md:block" />
-            <span className="inline-block mt-2 md:mt-0">Through Compassionate Giving</span>
-          </h1>
-          
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200/90 max-w-xl md:max-w-3xl mx-auto leading-relaxed">
-            Join our global movement of changemakers creating sustainable impact 
-            through targeted support and community empowerment.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-6 md:mt-8">
-            <button onClick={() => setIsModalOpen(true)}
-              className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 text-base sm:text-lg hover:scale-105" >
-              <i className="fas fa-heart text-lg sm:text-xl mr-1 sm:mr-2"></i>
-              <span>Make a Difference Now</span>
-            </button>
-          </div>
+        
         </div>
       </div>
 
