@@ -24,7 +24,7 @@ const Gallery = () => {
   return (
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Gallery</h2>
+        <h2 className="text-3xl font-bold text-orange-500 mb-8 text-center font-domine">Our Gallery</h2>
 
         <div className="grid gap-4 grid-cols-2 md:grid-cols-3">
           {images.map((image, index) => (

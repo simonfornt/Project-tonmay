@@ -31,8 +31,8 @@ function Team() {
         <>
             <div className="max-w-7xl mx-auto py-16">
                 <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold text-gray-800">Meet our Team Members</h2>
-                    <p className="text-gray-600 mt-4 px-1">Dedicated professionals working together to bring success.</p>
+                    <h2 className="text-4xl font-bold text-orange-400 font-domine">Meet our Team Members</h2>
+                    <p className="text-gray-600 mt-4 px-1 ">Dedicated professionals working together to bring success.</p>
                 </div>
                 
                 {/* Filter Buttons */}
@@ -62,7 +62,7 @@ function Team() {
     className="w-full h-full rounded-full object-cover ring-2 ring-orange-400 transition-transform duration-300 hover:scale-110" 
   />
 </div>
-                       <h3 className="text-lg sm:text-xl font-semibold mt-4 text-orange-400">
+                       <h3 className="text-lg sm:text-xl font-domine font-semibold mt-4 text-orange-400">
                          {member.name}
                        </h3>
                        <p className="text-sm sm:text-base text-gray-600">{member.role}</p>

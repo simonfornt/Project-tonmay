@@ -30,7 +30,7 @@ const supportItems = [
 function Support() {
   return (
     <div className='max-w-7xl mx-auto py-10 px-4'>
-      <h1 className='text-orange-400 uppercase text-center font-extrabold mb-9 text-3xl'>
+      <h1 className='text-orange-400 font-domine uppercase text-center font-extrabold mb-9 text-3xl'>
         Your Support Can Change Their Lives
       </h1>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
@@ -38,9 +38,9 @@ function Support() {
           <div key={item.id} className='border border-orange-400 rounded-2xl overflow-hidden shadow-md'>
             <img className='object-cover w-full h-48' src={item.image} alt={item.name} />
             <div className='text-center p-4'>
-              <h4 className='font-bold'>{item.name}</h4>
+              <h4 className='font-bold font-domine'>{item.name}</h4>
               <p className='text-orange-400 font-semibold my-2'>${item.amount}</p>
-              <button className='bg-orange-400 text-white py-2 px-4 rounded-lg hover:bg-orange-500 transition'>
+              <button className='bg-orange-400 font-domine text-white py-2 px-4 rounded-lg hover:bg-orange-500 transition'>
                 Add to Cart
               </button>
             </div>

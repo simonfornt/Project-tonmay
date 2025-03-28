@@ -17,7 +17,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center gap-3 text-3xl font-bold ">
             <img className="size-16" src={logo} alt="" />
-            <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 font-domine inline-block text-transparent bg-clip-text">
               Suddhagon
             </span>
           </div>
@@ -32,12 +32,12 @@ const Navbar = () => {
           </button>
 
           {/* Navigation Links */}
-          <div className={`md:flex items-center space-x-6 ${isOpen ? "flex flex-col absolute top-16 left-0 w-full bg-orange-500 py-4 md:py-0" : "hidden"}`}>
+          <div className={`md:flex items-center space-x-6 ${isOpen ? "flex flex-col  absolute top-16 left-0 w-full bg-orange-500 py-4 md:py-0" : "hidden"}`}>
             <ul className="flex flex-col md:flex-row items-center gap-6">
               <li>
                 <NavLink
                   to="/"
-                  className={`hover:text-blue-500 text-white font-semibold transition-colors ${
+                  className={`hover:text-blue-500 text-white  font-semibold transition-colors ${
                     isActive("/") ? "text-blue-700 font-semibold underline" : ""
                   }`}
                   onClick={() => isOpen && setIsOpen(false)}
@@ -67,11 +67,11 @@ const Navbar = () => {
                   <ul className="absolute bg-white shadow-md rounded-md mt-2 w-40">
                     <li>
                       <NavLink
-                        to="/projects/education"
+                        to="/projects/school"
                         className="block px-4 py-2 hover:bg-gray-200"
                         onClick={() => isOpen && setIsOpen(false)}
                       >
-                        Education
+                        Suddhagon School
                       </NavLink>
                     </li>
                     <li>

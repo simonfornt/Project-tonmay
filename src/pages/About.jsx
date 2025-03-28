@@ -41,7 +41,7 @@ function About() {
         <div className='flex flex-col lg:flex-row gap-9'>
           <div className='lg:basis-3/5'>
             <div className='mb-8'>
-              <h1 className='text-orange-400 font-bold text-2xl'>About Us</h1>
+              <h1 className='text-orange-400 font-bold text-2xl font-domine'>About Us</h1>
               <p>
                 Founded in 2023, Shuddhangan is a non-profit voluntary educational institution in Bangladesh dedicated to
                 serving underprivileged children. Focused on youth power, we actively work to eradicate poverty, ensure access
@@ -52,7 +52,7 @@ function About() {
               </p>
             </div>
             <div className='mb-8'>
-              <h1 className='text-orange-400 font-bold text-2xl'>Mission</h1>
+              <h1 className='text-orange-400 font-bold text-2xl font-domine'>Mission</h1>
               <p>
                 To actively contribute to the development of underprivileged communities in Bangladesh. Since our founding in
                 2023, we have dedicated ourselves to addressing important issues such as poverty alleviation, education,
@@ -62,7 +62,7 @@ function About() {
               </p>
             </div>
             <div>
-              <h1 className='text-orange-400 font-bold text-2xl'>Vision</h1>
+              <h1 className='text-orange-400 font-bold text-2xl font-domine'>Vision</h1>
               <p>
                 Envisioning a Bangladesh where every person, regardless of their background, has equal opportunities for growth
                 and development. We aspire to create a society where poverty is eradicated, education is accessible to all,
@@ -75,7 +75,7 @@ function About() {
 
           {/* Right Section */}
           <div className='lg:basis-2/5'>
-            <h1 className='text-3xl text-orange-400 font-bold mb-8'>Principles</h1>
+            <h1 className='text-3xl text-orange-400 font-bold mb-8 font-domine'>Principles</h1>
             <div>
               {principles.map((principle) => (
                 <div key={principle.id} className='flex items-center mb-7 gap-5'>
@@ -83,7 +83,7 @@ function About() {
                     <span className='text-orange-500 text-5xl'>
                       <i className={principle.icon}></i>
                     </span>
-                    <p className='text-[12px]'>{principle.title}</p>
+                    <p className='text-[12px] font-domine'>{principle.title}</p>
                   </div>
                   <div>
                     <p className='text-[10px]'>{principle.description}</p>
