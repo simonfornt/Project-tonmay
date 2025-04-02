@@ -11,7 +11,7 @@ const Navbar = () => {
   const isActive = (path) => pathname === path;
 
   return (
-    <nav className="bg-orange-500 shadow-lg w-full sticky top-0 z-50">
+    <nav className="bg-orange-400 shadow-lg w-full sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -38,7 +38,7 @@ const Navbar = () => {
                 <NavLink
                   to="/"
                   className={`hover:text-blue-500 text-white  font-semibold transition-colors ${
-                    isActive("/") ? "text-blue-700 font-semibold underline" : ""
+                    isActive("/") ? " text-red-500 underline decoration-teal-400 " : ""
                   }`}
                   onClick={() => isOpen && setIsOpen(false)}
                 >
@@ -56,6 +56,9 @@ const Navbar = () => {
                   About Us
                 </NavLink>
               </li>
+
+              {/*  Dropdown menu */}
+
               <li className="relative">
                 <button
                   className="hover:text-blue-500 text-white font-semibold transition-colors"
@@ -66,11 +69,8 @@ const Navbar = () => {
                 {projectDropdown && (
                   <ul className="absolute bg-white shadow-md rounded-md mt-2 w-40">
                     <li>
-                      <NavLink
-                        to="/projects/school"
-                        className="block px-4 py-2 hover:bg-gray-200"
-                        onClick={() => isOpen && setIsOpen(false)}
-                      >
+                      <NavLink to="/projects/school" className="block px-4 py-2 hover:bg-gray-200"
+                        onClick={() => isOpen && setIsOpen(false)}>
                         Suddhagon School
                       </NavLink>
                     </li>
@@ -104,6 +104,11 @@ const Navbar = () => {
                   </ul>
                 )}
               </li>
+
+
+              {/*  Dropdown end */}
+
+              
               <li>
                 <NavLink
                   to="/team"
