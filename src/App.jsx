@@ -11,10 +11,10 @@ import Navbar from "./components/Navbar";
 // Import Project Pages
 import ProjectsLayout from "./pages/projects/ProjectsLayout";
 import Project from "./pages/Project";
-import School from "./pages/Projects/School";
-import Environment from "./pages/Projects/Environment";
-import Community from "./pages/Projects/Community";
-import Heakth from './pages/projects/Heakth';
+import School from "./pages/projects/School";
+import Environment from "./pages/projects/Environment";
+import Community from "./pages/projects/Community";
+import Health from "./pages/projects/Health"; // ✅ Fixed typo
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
         <Route path="/projects" element={<ProjectsLayout />}>
           <Route index element={<Project />} />
           <Route path="school" element={<School />} />
-          <Route path="health" element={<Heakth />} />
+          <Route path="health" element={<Health />} /> {/* ✅ Corrected */}
           <Route path="environment" element={<Environment />} />
           <Route path="community" element={<Community />} />
         </Route>

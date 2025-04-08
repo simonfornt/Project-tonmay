@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 
-const ProjectsLayout = () => {
+function ProjectsLayout() {
   return (
     <div>
-      <h2 className="text-3xl font-bold text-center my-4"></h2>
+      <h2>Our Projects</h2>
       <Outlet />
     </div>
   );
-};
+}
 
 export default ProjectsLayout;
