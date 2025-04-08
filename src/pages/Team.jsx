@@ -3,22 +3,22 @@ import Gallery from "../components/Gallery";
 import m1 from "../assets/m1.jpg";
 import m2 from "../assets/m2.jpg";
 import m3 from "../assets/m3.jpg";
-import m4 from "../assets/m4.jpg";
+// import m4 from "../assets/m4.jpg";
 import m5 from "../assets/m5.jpg";
 import m6 from "../assets/m6.jpg";
 
 const teamMembers = [
-    { name: "Tanmoy Modal", role: "Founder & President", image: m5 },
-    { name: "Israt Jahan Jerin", role: "Junior Teacher", image: m1 },
-    { name: "Sumaiya Islam", role: "Assistant Teacher", image: m2 },
-    { name: "MD. Tamim Siam Ovi", role: "Junior Teacher", image: m3 },
-    { name: "Joy Biswas", role: "Assistant Teacher", image: m4 },
+    { name: "Tanmoy Modal", role: "Board of Directors", image: m5 },
+    { name: "Israt Jahan Jerin", role: "Advisory ", image: m1 },
+    { name: "Sumaiya Islam", role: "Excutive Commite", image: m2 },
+    { name: "MD. Tamim Siam Ovi", role: "Education Teacher", image: m3 },
+    // { name: "Joy Biswas", role: "Assistant Teacher", image: m4 },
     { name: "Sumon Ray", role: "Assistant Teacher", image: m6 },
-    { name: "Simon", role: "Advisory", image: m5},
+    
     { name: "Simanto Dash", role: "Volunteer", image: m2},
 ];
 
-const roles = ["All", ...new Set(teamMembers.map(member => member.role))];
+const roles = [ ...new Set(teamMembers.map(member => member.role))];
 
 function Team() {
     const [selectedRole, setSelectedRole] = useState("All");
