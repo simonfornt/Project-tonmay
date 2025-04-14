@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import heroImage1 from '../assets/childern.jpg';
-import heroImage2 from '../assets/mmc.jpg';
-import heroImage3 from '../assets/picnic.jpg';
+import heroImage1 from '../assets/hero.jpg';
+import heroImage2 from '../assets/hero2.jpg';
+import heroImage3 from '../assets/hero3.jpg';
+import heroImage4 from '../assets/hero4.jpg';
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const images = [heroImage1, heroImage2, heroImage3];
+  const images = [heroImage1, heroImage2, heroImage3,heroImage4];
 
   // Auto change slide every 5 seconds
   useEffect(() => {
