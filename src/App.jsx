@@ -54,8 +54,8 @@ function App() {
           <Route index element={<Project />} />
           <Route path="school" element={<School />} />
           <Route path="health" element={<Health />} /> {/* ✅ Corrected */}
-          <Route path="environment" element={<Environment />} />
-          <Route path="community" element={<Community />} />
+          {/* <Route path="environment" element={<Environment />} />
+          <Route path="community" element={<Community />} /> */}
         </Route>
       </Routes>
       <Footer />
