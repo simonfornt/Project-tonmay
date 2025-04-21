@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function Livelihood() {
   return (
@@ -9,11 +9,18 @@ function Livelihood() {
 
       <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
         <div className="text-gray-700 text-lg leading-relaxed space-y-6">
-          <p className='font-domine'>
-            At <strong className="text-orange-400">Shuddhangan</strong>, we believe that education alone is not enough to break the cycle of poverty. That’s why we are committed to uplifting families through <strong className="text-orange-400">livelihood support</strong> and sustainable empowerment initiatives.
+          <p className="font-domine">
+            At <strong className="text-orange-400">Shuddhangan</strong>, we
+            believe that education alone is not enough to break the cycle of
+            poverty. That’s why we are committed to uplifting families through{" "}
+            <strong className="text-orange-400">livelihood support</strong> and
+            sustainable empowerment initiatives.
           </p>
-          <p className='font-domine'>
-            We work with underprivileged communities to provide skills training, income-generating opportunities, and vocational education. Our programs are designed to build confidence, financial independence, and a better future.
+          <p className="font-domine">
+            We work with underprivileged communities to provide skills training,
+            income-generating opportunities, and vocational education. Our
+            programs are designed to build confidence, financial independence,
+            and a better future.
           </p>
           <ul className="list-disc pl-6 font-domine">
             <li>Skill development workshops for parents</li>
@@ -23,8 +30,10 @@ function Livelihood() {
             <li>Job placement assistance</li>
             <li>Financial literacy & savings training</li>
           </ul>
-          <p className='font-domine'>
-            These efforts ensure not just survival but dignity—helping individuals stand tall as they earn with pride and contribute meaningfully to their communities.
+          <p className="font-domine">
+            These efforts ensure not just survival but dignity—helping
+            individuals stand tall as they earn with pride and contribute
+            meaningfully to their communities.
           </p>
         </div>
 

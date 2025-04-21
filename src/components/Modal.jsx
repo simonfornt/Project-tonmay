@@ -16,7 +16,7 @@ function Modal() {
       {/* Responsive Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm animate-fadeIn">
-          <div 
+          <div
             className="bg-white p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-2xl max-w-md w-full mx-4 border border-gray-100
                      transform transition-all duration-300 scale-95 hover:scale-100"
           >

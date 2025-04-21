@@ -17,7 +17,6 @@ import Innovation from "./pages/details/Innovation";
 import Livelihood from "./pages/details/Livelihood";
 import Cards from "./components/Cards";
 
-
 // Import Project Pages
 import ProjectsLayout from "./pages/projects/ProjectsLayout";
 import Project from "./pages/Project";
@@ -38,16 +37,14 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/donation" element={<Donation />} />
 
-
         {/* focus area */}
-        <Route path="/" element={<Cards/>}/>
-        <Route path="/education" element={<Education/>}/>
-        <Route path="/livelihood" element={<Livelihood/>}/>
-        <Route path="/innovation" element={<Innovation/>}/>
-        <Route path="/healthcare" element={<Healthcare/>}/>
-        <Route path="/environment" element={<Environment/>}/>
-        <Route path="/community" element={<Community/>}/>
-        
+        <Route path="/" element={<Cards />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/livelihood" element={<Livelihood />} />
+        <Route path="/innovation" element={<Innovation />} />
+        <Route path="/healthcare" element={<Healthcare />} />
+        <Route path="/environment" element={<Environment />} />
+        <Route path="/community" element={<Community />} />
 
         {/* Nested Projects Routes */}
         <Route path="/projects" element={<ProjectsLayout />}>

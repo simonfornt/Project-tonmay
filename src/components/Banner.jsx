@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Banner = () => {
   return (
@@ -26,20 +26,24 @@ const Banner = () => {
           </h1>
 
           <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-            Join our mission to provide quality healthcare access to underserved 
+            Join our mission to provide quality healthcare access to underserved
             communities worldwide. Your support can save lives.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all 
-                          flex items-center justify-center gap-2">
+            <button
+              className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all 
+                          flex items-center justify-center gap-2"
+            >
               <i className="fas fa-hand-holding-medical"></i>
               Support Now
             </button>
-            
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-blue-900 
-                          transition-all flex items-center justify-center gap-2">
+
+            <button
+              className="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-blue-900 
+                          transition-all flex items-center justify-center gap-2"
+            >
               <i className="fas fa-info-circle"></i>
               Learn More
             </button>

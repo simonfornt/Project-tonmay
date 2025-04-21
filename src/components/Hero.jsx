@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import heroImage1 from '../assets/hero.jpg';
-import heroImage2 from '../assets/hero2.jpg';
-import heroImage3 from '../assets/hero3.jpg';
-import heroImage4 from '../assets/hero4.jpg';
+import heroImage1 from "../assets/hero.jpg";
+import heroImage2 from "../assets/hero2.jpg";
+import heroImage3 from "../assets/hero3.jpg";
+import heroImage4 from "../assets/hero4.jpg";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const images = [heroImage1, heroImage2, heroImage3,heroImage4];
+  const images = [heroImage1, heroImage2, heroImage3, heroImage4];
 
   // Auto change slide every 5 seconds
   useEffect(() => {
@@ -34,7 +34,9 @@ const Hero = () => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === index ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              currentSlide === index ? "opacity-100" : "opacity-0"
+            }`}
           >
             <img
               src={image}
@@ -66,7 +68,9 @@ const Hero = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${currentSlide === index ? 'bg-white' : 'bg-gray-400'}`}
+            className={`w-3 h-3 rounded-full transition-colors ${
+              currentSlide === index ? "bg-white" : "bg-gray-400"
+            }`}
           />
         ))}
       </div>

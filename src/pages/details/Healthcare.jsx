@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function Healthcare() {
   return (
@@ -11,10 +11,15 @@ function Healthcare() {
         {/* Text Content */}
         <div className="text-gray-700 text-lg leading-relaxed space-y-6 font-domine">
           <p>
-            At <strong className="text-orange-400">Shuddhangan</strong>, we believe that good health is the foundation for a child’s success in school and in life. That’s why we place a strong emphasis on physical and mental well-being through regular health initiatives.
+            At <strong className="text-orange-400">Shuddhangan</strong>, we
+            believe that good health is the foundation for a child’s success in
+            school and in life. That’s why we place a strong emphasis on
+            physical and mental well-being through regular health initiatives.
           </p>
           <p>
-            Our healthcare program is designed to address the critical medical needs of underprivileged children and their families—ensuring no child is held back due to illness or lack of medical attention.
+            Our healthcare program is designed to address the critical medical
+            needs of underprivileged children and their families—ensuring no
+            child is held back due to illness or lack of medical attention.
           </p>
           <ul className="list-disc pl-6">
             <li>Regular health check-ups by medical professionals</li>
@@ -25,19 +30,20 @@ function Healthcare() {
             <li>Emergency care assistance</li>
           </ul>
           <p>
-            Through compassion and care, we strive to build a healthier community—empowered to grow and thrive.
+            Through compassion and care, we strive to build a healthier
+            community—empowered to grow and thrive.
           </p>
         </div>
 
         {/* Image Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {[
-            'healt1.jpg',
-            'health2.jpg',
-            'health3.jpg',
-            'health4.jpg',
-            'health5.jpg',
-            'health6.jpg',
+            "healt1.jpg",
+            "health2.jpg",
+            "health3.jpg",
+            "health4.jpg",
+            "health5.jpg",
+            "health6.jpg",
           ].map((img, index) => (
             <img
               key={index}

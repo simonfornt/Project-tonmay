@@ -1,18 +1,20 @@
 // src/components/Navbar.jsx
 import { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation, Link } from "react-router-dom";
-import {Menu , X} from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logo from "../assets/logo-logo1.png";
 
-const navLinkBaseClass = "text-white font-semibold transition-colors duration-200 ease-in-out hover:text-teal-200 focus:outline-none focus:text-teal-200";
-const navLinkActiveClass = "text-teal-200 font-bold underline decoration-teal-400 underline-offset-4";
+const navLinkBaseClass =
+  "text-white font-semibold transition-colors duration-200 ease-in-out hover:text-teal-200 focus:outline-none focus:text-teal-200";
+const navLinkActiveClass =
+  "text-teal-200 font-bold underline decoration-teal-400 underline-offset-4";
 const mobileNavLinkClass = "block py-2 px-4 w-full text-center";
 
 const projectLinks = [
   { to: "/projects/school", label: "Suddhagon School" },
   { to: "/projects/health", label: "Health" },
   { to: "/projects/environment", label: "Environment" },
-  { to: "/projects/community", label: "Community Support" }
+  { to: "/projects/community", label: "Community Support" },
 ];
 
 const mainLinks = [
@@ -20,7 +22,7 @@ const mainLinks = [
   { to: "/about", label: "About Us" },
   { dropdown: true, label: "Projects" },
   { to: "/team", label: "Team" },
-  { to: "/contact", label: "Contact" }
+  { to: "/contact", label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -87,9 +89,19 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 text-3xl font-bold" onClick={closeMobileMenu}>
-            <img className="size-12 md:size-16" src={logo} alt="Shuddhangan Logo" />
-            <span className="text-white font-domine hidden sm:inline-block">Shuddhangan</span>
+          <Link
+            to="/"
+            className="flex items-center gap-3 text-3xl font-bold"
+            onClick={closeMobileMenu}
+          >
+            <img
+              className="size-12 md:size-16"
+              src={logo}
+              alt="Shuddhangan Logo"
+            />
+            <span className="text-white font-domine hidden sm:inline-block">
+              Shuddhangan
+            </span>
           </Link>
 
           {/* Hamburger */}
@@ -101,9 +113,9 @@ const Navbar = () => {
             aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? (
-                <X className ="w-6 h-6"/>
-             ) : (
-                <Menu className= "w-6 h-6"/>
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
             )}
           </button>
 
@@ -116,22 +128,38 @@ const Navbar = () => {
                     <button
                       ref={dropdownButtonRef}
                       onClick={toggleProjectDropdown}
-                      className={`${navLinkBaseClass} flex items-center gap-1 ${isProjectsActive ? navLinkActiveClass : ""}`}
+                      className={`${navLinkBaseClass} flex items-center gap-1 ${
+                        isProjectsActive ? navLinkActiveClass : ""
+                      }`}
                       aria-haspopup="true"
                       aria-expanded={isProjectDropdownOpen}
                     >
                       {link.label}
-                      <svg className={`h-4 w-4 transition-transform ${isProjectDropdownOpen ? "rotate-180" : "rotate-0"}`} viewBox="0 0 24 24" stroke="currentColor"><path d="M19 9l-7 7-7-7" /></svg>
+                      <svg
+                        className={`h-4 w-4 transition-transform ${
+                          isProjectDropdownOpen ? "rotate-180" : "rotate-0"
+                        }`}
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path d="M19 9l-7 7-7-7" />
+                      </svg>
                     </button>
                     <ul
                       ref={dropdownRef}
                       className={`absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-1 transition-all duration-200 origin-top ${
-                        isProjectDropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
+                        isProjectDropdownOpen
+                          ? "opacity-100 scale-100"
+                          : "opacity-0 scale-95 pointer-events-none"
                       }`}
                     >
                       {projectLinks.map((project, j) => (
                         <li key={j}>
-                          <NavLink to={project.to} className="block px-4 py-2 text-gray-700 hover:bg-orange-100 hover:text-orange-700" onClick={closeDropdownAndMobileMenu}>
+                          <NavLink
+                            to={project.to}
+                            className="block px-4 py-2 text-gray-700 hover:bg-orange-100 hover:text-orange-700"
+                            onClick={closeDropdownAndMobileMenu}
+                          >
                             {project.label}
                           </NavLink>
                         </li>
@@ -140,7 +168,12 @@ const Navbar = () => {
                   </li>
                 ) : (
                   <li key={i}>
-                    <NavLink to={link.to} className={`${navLinkBaseClass} ${isActive(link.to) ? navLinkActiveClass : ""}`}>
+                    <NavLink
+                      to={link.to}
+                      className={`${navLinkBaseClass} ${
+                        isActive(link.to) ? navLinkActiveClass : ""
+                      }`}
+                    >
                       {link.label}
                     </NavLink>
                   </li>
@@ -171,15 +204,29 @@ const Navbar = () => {
             link.dropdown ? (
               <li key={i} className="w-full">
                 <button
-                  className={`${navLinkBaseClass} ${mobileNavLinkClass} flex items-center justify-center gap-1 ${isProjectsActive ? navLinkActiveClass : ""}`}
+                  className={`${navLinkBaseClass} ${mobileNavLinkClass} flex items-center justify-center gap-1 ${
+                    isProjectsActive ? navLinkActiveClass : ""
+                  }`}
                   onClick={toggleProjectDropdown}
                   aria-haspopup="true"
                   aria-expanded={isProjectDropdownOpen}
                 >
                   {link.label}
-                  <svg className={`h-4 w-4 transition-transform ${isProjectDropdownOpen ? "rotate-180" : "rotate-0"}`} viewBox="0 0 24 24" stroke="currentColor"><path d="M19 9l-7 7-7-7" /></svg>
+                  <svg
+                    className={`h-4 w-4 transition-transform ${
+                      isProjectDropdownOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M19 9l-7 7-7-7" />
+                  </svg>
                 </button>
-                <ul className={`w-full bg-orange-600 overflow-hidden transition-all duration-300 ease-in-out ${isProjectDropdownOpen ? "max-h-96" : "max-h-0"}`}>
+                <ul
+                  className={`w-full bg-orange-600 overflow-hidden transition-all duration-300 ease-in-out ${
+                    isProjectDropdownOpen ? "max-h-96" : "max-h-0"
+                  }`}
+                >
                   {projectLinks.map((project, j) => (
                     <li key={j}>
                       <NavLink
@@ -197,7 +244,9 @@ const Navbar = () => {
               <li key={i}>
                 <NavLink
                   to={link.to}
-                  className={`${navLinkBaseClass} ${mobileNavLinkClass} ${isActive(link.to) ? navLinkActiveClass : ""}`}
+                  className={`${navLinkBaseClass} ${mobileNavLinkClass} ${
+                    isActive(link.to) ? navLinkActiveClass : ""
+                  }`}
                   onClick={closeMobileMenu}
                 >
                   {link.label}
